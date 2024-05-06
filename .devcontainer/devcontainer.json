@@ -1,0 +1,11 @@
+{
+  "name": "Python 3.12.x",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "..",
+    "args": { }
+  },
+  "mounts": [
+    "source=${localWorkspaceFolder},target=/app,type=bind,consistency=cached"
+  ]
+}

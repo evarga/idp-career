@@ -1,0 +1,12 @@
+{
+  "identifier": "e_eDf2Gk9SQTQLGN7a",
+  "title": "Demo Collection",
+  "icon": "Blueprint",
+  "team": [],
+  "properties": {},
+  "relations": {
+    "problems": [
+      "e_PxLsLf9xdNjTbcnz"
+    ]
+  }
+}

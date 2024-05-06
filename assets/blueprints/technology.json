@@ -1,0 +1,30 @@
+{
+  "identifier": "technology",
+  "description": "Represents a technology used in a solution, like, programming language, database, etc.",
+  "title": "Technology",
+  "icon": "Blueprint",
+  "schema": {
+    "properties": {
+      "tags": {
+        "items": {
+          "type": "object"
+        },
+        "type": "array",
+        "title": "Tags",
+        "description": "Set of key/value pairs that may additionally augment the data model."
+      },
+      "description": {
+        "type": "string",
+        "title": "Description",
+        "description": "Contains relevant information about a technology possibly with curated list of external references.",
+        "icon": "Book",
+        "format": "markdown"
+      }
+    },
+    "required": []
+  },
+  "mirrorProperties": {},
+  "calculationProperties": {},
+  "aggregationProperties": {},
+  "relations": {}
+}

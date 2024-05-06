@@ -1,0 +1,38 @@
+{
+  "identifier": "method",
+  "description": "Represents an algorithm, method or technique applied in a problem, like, binary search, two-pointer technique, etc.",
+  "title": "Method",
+  "icon": "Blueprint",
+  "schema": {
+    "properties": {
+      "tags": {
+        "items": {
+          "type": "object"
+        },
+        "type": "array",
+        "title": "Tags",
+        "description": "Set of key/value pairs that may additionally augment the data model."
+      },
+      "description": {
+        "type": "string",
+        "title": "Description",
+        "description": "Contains relevant information about a method possibly with curated list of external references.",
+        "icon": "Book",
+        "format": "markdown"
+      }
+    },
+    "required": []
+  },
+  "mirrorProperties": {},
+  "calculationProperties": {},
+  "aggregationProperties": {},
+  "relations": {
+    "data_structure": {
+      "title": "Data Structure",
+      "description": "Link to a principal (default) data structure required by a method. For example, Kruskal's algorithm assumes the usage of the  disjoint-set (union find) data structure.",
+      "target": "data_structure",
+      "required": false,
+      "many": false
+    }
+  }
+}

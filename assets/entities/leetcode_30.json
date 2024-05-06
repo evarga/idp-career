@@ -1,0 +1,25 @@
+{
+  "identifier": "e_PxLsLf9xdNjTbcnz",
+  "title": "Substring with Concatenation of All Words",
+  "icon": "Blueprint",
+  "team": [],
+  "properties": {
+    "source": "https://leetcode.com/problems/substring-with-concatenation-of-all-words/",
+    "solution": "```cpp\nclass Solution {\npublic:\n    vector<int> findSubstring(const string s, const vector<string> &words) {\n        // Contains the overall histogram of words.\n        unordered_map<string,int> cnt;\n        for (int i = 0; i < words.size(); i++)\n            cnt[words[i]]++;\n\n        const int wordLen = words[0].length();\n        const int totalLen = words.size() * wordLen;\n        // We simultaneously use as many windows as there are characters in each word.\n        vector<WindowRecord> window(wordLen);\n        string buff;\n        vector<int> ans;  \n\n        for (int i = 0; i < s.size(); i++) {\n            if (i < wordLen)\n                window[i].start = i;\n\n            buff += s[i];\n            if (buff.length() == wordLen) {\n                auto &currWindow = window[(i + 1) % wordLen];\n\n                // If this is an unknown word, then reset the current window. \n                if (cnt.find(buff) == cnt.cend()) {\n                    currWindow.cnt.clear();\n                    currWindow.start = i + 1;\n                } else {\n                    // If there are too many repetitions of the accumulated word, \n                    // then remove all words from the current window from left to right\n                    // including the first occurrence of the accumulated word.  \n                    if (++currWindow.cnt[buff] > cnt[buff])\n                        for (int j = currWindow.start; j < s.size(); j += wordLen) {\n                            const string &word = s.substr(j, wordLen);\n                            currWindow.cnt[word]--;\n                            if (word == buff) {\n                                currWindow.start = j + wordLen;\n                                break;\n                            }\n                        }\n\n                    // If the current window's length indicates that it contains \n                    // all input words, then register it in the output.\n                    if (i - currWindow.start + 1 == totalLen)\n                        ans.push_back(currWindow.start);\n                }\n                // This is OK here, since the max. length of any word is 30.\n                buff.erase(0, 1);\n            }\n        }\n        return ans;\n    }\n\nprivate:\n    struct WindowRecord {\n        unordered_map<string,int> cnt;\n        int start;\n    };\n};\n```\nIt is possible to further optimize the solution by preprocessing the input via hashing. This would improve string comparisons in a manner similar to what is applied in the [Rabin-Karp](https://medium.com/@Roshan-jha/understanding-rabin-karp-algorithm-for-string-matching-e968dbe296b2) algorithm.",
+    "difficulty": "Medium",
+    "favorite": true,
+    "complete": true
+  },
+  "relations": {
+    "technologies": [
+      "e_7O6Bk0ZvvWsL0ng6"
+    ],
+    "data_structures": [
+      "e_OgwQxICL7gBOscub"
+    ],
+    "methods": [
+      "e_PHR8xHRnSyDpfLfT"
+    ],
+    "patterns": []
+  }
+}

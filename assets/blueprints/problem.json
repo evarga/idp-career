@@ -1,0 +1,113 @@
+{
+  "identifier": "problem",
+  "description": "Represent a problem typically found on interview preparation and competitive programming platforms. ",
+  "title": "Problem",
+  "icon": "Blueprint",
+  "schema": {
+    "properties": {
+      "difficulty": {
+        "type": "string",
+        "title": "Difficulty",
+        "description": "Difficulty level of a problem.",
+        "enum": [
+          "Easy",
+          "Medium",
+          "Hard",
+          "Extra Hard"
+        ],
+        "enumColors": {
+          "Easy": "green",
+          "Medium": "yellow",
+          "Hard": "orange",
+          "Extra Hard": "red"
+        }
+      },
+      "favorite": {
+        "type": "boolean",
+        "title": "Favorite",
+        "default": false,
+        "description": "Marker whether a problem is very interesting."
+      },
+      "complete": {
+        "type": "boolean",
+        "title": "Complete",
+        "default": false,
+        "description": "Marks whether all sub-problems are solved or not."
+      },
+      "source": {
+        "title": "Source",
+        "type": "string",
+        "description": "The source of a problem that usually contains a submission link.",
+        "format": "url",
+        "spec": "embedded-url"
+      },
+      "solution": {
+        "icon": "Book",
+        "type": "string",
+        "title": "Solution",
+        "description": "Description of a solution possibly accompanied with a source code. It may contain follow up questions or ideas for further improvements.",
+        "format": "markdown"
+      },
+      "tags": {
+        "items": {
+          "type": "object"
+        },
+        "type": "array",
+        "title": "Tags",
+        "description": "Set of key/value pairs that may additionally augment the data model."
+      },
+      "description": {
+        "icon": "Book",
+        "type": "string",
+        "title": "Description",
+        "description": "The problem statement in case there is no link to the source or if there are additional remarks pertaining to the problem statement.",
+        "format": "markdown"
+      }
+    },
+    "required": [
+      "difficulty",
+      "favorite",
+      "complete"
+    ]
+  },
+  "mirrorProperties": {},
+  "calculationProperties": {},
+  "aggregationProperties": {},
+  "relations": {
+    "successor": {
+      "title": "Successor",
+      "description": "Link to the next (usually harder) variant of a problem.",
+      "target": "problem",
+      "required": false,
+      "many": false
+    },
+    "technologies": {
+      "title": "Technologies",
+      "description": "Links to used technologies. In case a solution is available in multiple programming languages, then there would be multiple links, too.",
+      "target": "technology",
+      "required": false,
+      "many": true
+    },
+    "data_structures": {
+      "title": "Data Structures",
+      "description": "Links to used data structures.",
+      "target": "data_structure",
+      "required": false,
+      "many": true
+    },
+    "methods": {
+      "title": "Methods",
+      "description": "Links to used methods, algorithms and/or techniques.",
+      "target": "method",
+      "required": false,
+      "many": true
+    },
+    "patterns": {
+      "title": "Patterns",
+      "description": "Links to used patterns. Patterns usually have dependencies and form a pattern language.",
+      "target": "pattern",
+      "required": false,
+      "many": true
+    }
+  }
+}

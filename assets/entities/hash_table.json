@@ -1,0 +1,10 @@
+{
+  "identifier": "e_OgwQxICL7gBOscub",
+  "title": "Hash Table",
+  "icon": "Blueprint",
+  "team": [],
+  "properties": {
+    "description": "# General\nA good overview of this data structure is available [here](https://en.wikipedia.org/wiki/Hash_table)."
+  },
+  "relations": {}
+}

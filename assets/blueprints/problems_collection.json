@@ -1,0 +1,38 @@
+{
+  "identifier": "problems_collection",
+  "description": "Collection of problems grouped by some topic. It can also play the role of a learning card.",
+  "title": "Problems Collection",
+  "icon": "Blueprint",
+  "schema": {
+    "properties": {
+      "tags": {
+        "items": {
+          "type": "object"
+        },
+        "type": "array",
+        "title": "Tags",
+        "description": "Set of key/value pairs that may additionally augment the data model."
+      },
+      "description": {
+        "icon": "Book",
+        "type": "string",
+        "title": "Description",
+        "description": "Additional information about a collection.",
+        "format": "markdown"
+      }
+    },
+    "required": []
+  },
+  "mirrorProperties": {},
+  "calculationProperties": {},
+  "aggregationProperties": {},
+  "relations": {
+    "problems": {
+      "title": "Problems",
+      "description": "Links to problems that are part of a collection.",
+      "target": "problem",
+      "required": false,
+      "many": true
+    }
+  }
+}

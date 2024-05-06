@@ -1,0 +1,15 @@
+{
+  "identifier": "e_7O6Bk0ZvvWsL0ng6",
+  "title": "C++ Programming Language",
+  "icon": "Blueprint",
+  "team": [],
+  "properties": {
+    "description": "# General\nFor learning C++ you may take the free course [C++ For Programmers](https://www.udacity.com/course/c-for-programmers--ud210) at Udacity.\n\n# Competitive Programming\nYou can include all headers at once as explained [here](https://www.geeksforgeeks.org/bitsstdc-h-c/). There are also useful [builtin functions of the GCC compiler](https://www.geeksforgeeks.org/builtin-functions-gcc-compiler/); GCC is most frequently used on various platforms.",
+    "tags": [
+      {
+        "type": "programming language"
+      }
+    ]
+  },
+  "relations": {}
+}

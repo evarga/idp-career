@@ -1,0 +1,14 @@
+{
+  "identifier": "e_sj67Gkq4DpPQbOv9",
+  "title": "Computer Science",
+  "icon": "Blueprint",
+  "team": [],
+  "properties": {
+    "description": "# General\nA good starting point is ACM Selects [guide](https://selects.acm.org/selections/getting-started-with-computer-science) on computer science."
+  },
+  "relations": {
+    "problems": [
+      "e_PxLsLf9xdNjTbcnz"
+    ]
+  }
+}

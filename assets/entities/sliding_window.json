@@ -1,0 +1,12 @@
+{
+  "identifier": "e_PHR8xHRnSyDpfLfT",
+  "title": "Sliding Window",
+  "icon": "Blueprint",
+  "team": [],
+  "properties": {
+    "description": "# General\nA good description of this technique is given [here](https://www.geeksforgeeks.org/window-sliding-technique/)."
+  },
+  "relations": {
+    "data_structure": "e_OgwQxICL7gBOscub"
+  }
+}
